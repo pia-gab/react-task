@@ -15,12 +15,11 @@ class List extends React.Component {
   }
   render() {
     return (
-      <section className ={styles.component}>
-        <Hero titleText={this.props.title} />
+      <section className={styles.component}>
+        {<Hero img={this.props.img} titleText={this.props.title} />}
         <div className={styles.description}>
           {this.props.children}
         </div>
-        <Hero img={this.props.img} />
         <div className={styles.columns}>
           <Column titleH3={'elo'}/>
           <Column titleH3={'pomelo'}/>
