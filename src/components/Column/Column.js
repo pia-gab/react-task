@@ -20,6 +20,7 @@ class Column extends React.Component {
   }
   
   render() {
+    console.log(this.props)
     const {title, icon, cards, addCard} = this.props;
     return (
       <section className ={styles.component}>
