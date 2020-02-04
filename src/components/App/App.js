@@ -19,7 +19,7 @@ class App extends React.Component {
         <Search />
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
-      ))}
+        ))}
       </main>
     );
   }

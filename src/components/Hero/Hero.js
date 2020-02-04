@@ -4,18 +4,18 @@ import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
 
 const Hero = props => {
-  console.log(props)
+  console.log(props);
   return(
-  <header className ={styles.component}>
-    <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
-    <img src={props.image} className={styles.image}/>
-  </header>
-  )
+    <header className ={styles.component}>
+      <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
+      <img src={props.image} className={styles.image}/>
+    </header>
+  );
 };
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
-  img: PropTypes.string,
+  image: PropTypes.string,
 };
 
 export default Hero;

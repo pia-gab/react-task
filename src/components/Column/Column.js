@@ -20,8 +20,8 @@ class Column extends React.Component {
   }
   
   render() {
-    console.log(this.props)
-    const {title, icon, cards, addCard} = this.props;
+    console.log(this.props);
+    const {cards, addCard} = this.props;
     return (
       <section className ={styles.component}>
         <h3 className={styles.title}>{this.props.titleH3}
@@ -35,7 +35,7 @@ class Column extends React.Component {
         </div>
         {<div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={addCard}/>
-          </div>}
+        </div>}
       </section>
     );
   }
