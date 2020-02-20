@@ -24,7 +24,7 @@ Info.defaultProps = {
   titleText: settings.InfoContent.title,
   imageUrl: settings.InfoContent.image,
   infoContent: settings.InfoContent.title,
-  headerInfo: settings.headerInfo.text,
+  headerInfo: settings.navMenu.headerInfo.text,
 };
 
 export default Info;

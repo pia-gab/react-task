@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 class Column extends React.Component {
   
   static propTypes = {
-    titleH3: PropTypes.node,
+    title: PropTypes.node,
     icon: PropTypes.node,
     cards: PropTypes.array,
     addCard: PropTypes.func,
@@ -24,10 +24,12 @@ class Column extends React.Component {
     const {cards, addCard} = this.props;
     return (
       <section className ={styles.component}>
-        <h3 className={styles.title}>{this.props.titleH3}
+        <h3 className={styles.title}>
+          {this.props.title}
           <span className={styles.icon}>
-            <Icon name={this.props.name}/>;
-          </span></h3>
+            <Icon name={this.props.icon}/>;
+          </span>
+        </h3>
         <div>
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />

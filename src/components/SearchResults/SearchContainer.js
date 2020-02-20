@@ -4,7 +4,7 @@ import {
   getSearchString,
   countVisibleCards,
   countAllCards,
-  changeActionSearchString,
+  createActionChangeSearchString,
 } from '../../redux/searchStringRedux';
 
 const mapStateToProps = (state) => ({
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  changeSearchString: newSearchString => dispatch(changeActionSearchString(newSearchString)),
+  changeSearchString: newSearchString => dispatch(createActionChangeSearchString(newSearchString)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

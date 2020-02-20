@@ -7,6 +7,7 @@ class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
     action: PropTypes.func,
+    history: PropTypes.object,
   }
 
   static defaultProps = {
@@ -28,7 +29,7 @@ class Creator extends React.Component {
 
   handleOK = () => {
     if(this.state.value != ''){
-      this.props.action(this.state.value);
+      this.props.history.push(`/search/${this.state.value}`);
       this.setState({
         value: '',
         visibleButtons: false,

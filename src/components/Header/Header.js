@@ -2,42 +2,46 @@ import React from 'react';
 import styles from './Header.scss';
 import {NavLink, Link} from 'react-router-dom';
 import Container from '../Container/Container';
+import PropTypes from 'prop-types';
 import Icon from '../Icon/Icon';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
+import Search from '../Search/Search';
+
 
 class Header extends React.Component {
-  static propTypes ={
-    MenuIcon: this.propTypes.node,
-    toHome: this.propTypes.string,
-    homeURL: this.propTypes.string,
-    toInfo: this.propTypes.string,
-    InfoURL: this.propTypes.string,
-    toFAQ: this.propTypes.string,
-    FAQURL: this.propTypes.string,
+  static propTypes = {
+    menuIcon: PropTypes.node,
+    headerHome: PropTypes.string,
+    homeURL: PropTypes.string,
+    headerFAQ: PropTypes.string,
+    faqURL: PropTypes.string,
+    headerInfo: PropTypes.node,
+    infoURL: PropTypes.string,
   }
   static defaultProps={
-    MenuIcon: settings.navMenu.MenuIcon,
-    toHome: settings.navMenu.toHome,
+    menuIcon: settings.navMenu.menuIcon,
+    headerHome: settings.navMenu.headerHome,
     homeURL: settings.navMenu.homeURL,
-    toInfo: settings.navMenu.toInfo,
-    InfoURL: settings.navMenu.InfoURL,
-    toFAQ: settings.navMenu.toFAQ,
-    FAQURL: settings.navMenu.FAQURL,
+    headerFAQ: settings.navMenu.headerFAQ,
+    faqURL: settings.navMenu.faqURL,
+    infoURL: settings.navMenu.infoURL,
+    headerInfo: settings.navMenu.headerInfo,
   }
   render(){
-    const{MenuIcon, toHome, homeURL, toInfo, InfoURL, toFAQ, FAQURL} = this.props;
+    const{menuIcon, headerHome, homeURL, faqURL, infoURL, headerInfo, headerFAQ} = this.props;
     return(
       <header>
         <Container>
           <div className={styles.wrapper}>
-            <Link to ={toHome} className={styles.logo}>
-              <Icon name={MenuIcon}/>
+            <Link to ={homeURL} className={styles.logo}>
+              <Icon name={menuIcon}/>
             </Link>
+            <Search />
             <nav>
-              <NavLink exact to={toHome} activeClassName='active'>{ReactHtmlParser(homeURL)}></NavLink>
-              <NavLink exact to={toInfo} activeClassName='active'>{ReactHtmlParser(InfoURL)}></NavLink>
-              <NavLink exact to={toFAQ} activeClassName='active'>{ReactHtmlParser(FAQURL)}></NavLink>
+              <NavLink exact to={homeURL} activeClassName='active'>{ReactHtmlParser(headerHome)}</NavLink>
+              <NavLink exact to={infoURL} activeClassName='active'>{ReactHtmlParser(headerInfo)}</NavLink>
+              <NavLink exact to={faqURL} activeClassName='active'>{ReactHtmlParser(headerFAQ)}</NavLink>
             </nav>
           </div>
         </Container>
