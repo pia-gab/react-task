@@ -29,7 +29,7 @@ class Creator extends React.Component {
 
   handleOK = () => {
     if(this.state.value != ''){
-      this.props.history.push(`/search/${this.state.value}`);
+      this.props.action(this.state.value);
       this.setState({
         value: '',
         visibleButtons: false,

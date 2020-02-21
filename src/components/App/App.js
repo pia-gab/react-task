@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.scss';
 import Home from '../Home/HomeContainer';
-import SearchResults from '../SearchResults/SearchResults';
+import SearchResults from '../SearchResults/SearchResultsContainer';
 import Info from '../Info/Info';
 import MainLayout from '../MainLayout/MainLayout';
 import {BrowserRouter, Route} from 'react-router-dom';
