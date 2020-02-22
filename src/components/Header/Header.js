@@ -38,7 +38,7 @@ class Header extends React.Component {
               <Icon name={menuIcon}/>
             </Link>
             <Search />
-            <nav>
+            <nav className={styles.wrapper}>
               <NavLink exact to={homeURL} activeClassName='active'>{ReactHtmlParser(headerHome)}</NavLink>
               <NavLink exact to={infoURL} activeClassName='active'>{ReactHtmlParser(headerInfo)}</NavLink>
               <NavLink exact to={faqURL} activeClassName='active'>{ReactHtmlParser(headerFAQ)}</NavLink>

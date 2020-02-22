@@ -12,7 +12,7 @@ class Card extends React.Component {
     const {title} = this.props;
     return (
       <section className={styles.component}>
-        <h4>{ReactHtmlParser(title)}</h4>
+        <h4 className={styles.cardTitle}>{ReactHtmlParser(title)}</h4>
       </section>
     );
   }
