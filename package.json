@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gemfile": "^1.1.0",
     "http-server": "^0.12.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -34,6 +35,7 @@
     "react-router-dom": "^5.1.2",
     "react-router-transition": "^1.4.0",
     "redux": "^4.0.1",
+    "server": "^1.0.26",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
@@ -56,7 +58,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.1",
-    "webpack-merge": "^4.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.1"
   }
 }

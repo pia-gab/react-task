@@ -7,6 +7,7 @@ const baseConfig = () => ({
   entry: './src/index.js',
   devServer: {
     historyApiFallback: true,
+    port: process.env.PORT || 80,
   },
   output: {
     path: path.join(__dirname, 'dist'),
